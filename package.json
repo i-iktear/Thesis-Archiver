@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "12.16.3",
+    "npm": "6.14.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev" : "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-iktear/Server.git"
+  },
+  "author": "Iktear Uddin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-iktear/Server/issues"
+  },
+  "homepage": "https://github.com/i-iktear/Server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}
