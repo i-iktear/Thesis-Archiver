@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Thesis archiver</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../log/fonts/css/font-awesome.min.css"> 
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="reg.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-reg">
+			<div class="wrap-reg">
+				
+				<form class="reg-form ">
+					<span class="reg-form-title">
+						REGISTRATION FORM
+                    </span>
+                    
+                    <div class="wrap-input validate-input" data-validate = "Name is required">
+						<input class="input" type="text" name="name" placeholder= "Enter Name" required>
+						<span class="focus-input"></span>	
+                    </div>
+
+                        <div>
+                            <input type="radio"  class="type" name="teacher" value="Teacher">
+                            <label for="Teacher">Teacher</label>
+                           <input type="radio"  class="type" name="student" value="student">
+                          <label for="student">Student</label><br>
+                         
+                        </div>
+
+                    <div class="wrap-input validate-input" data-validate = "Varsity ID is required">
+                        <input class="input" type="list" list="browsers" name="department" placeholder= "Department"  required>
+                        <datalist id="browsers">
+                            <option value="SWE">
+                            <option value="CSE">
+                            <option value="MIT">
+                            <option value="IT">
+                          </datalist>
+                        <span class="focus-input"></span>
+                    </div>
+
+                    <div class="wrap-input validate-input" data-validate = "Varsity ID is required">
+						<input class="input" type="text" name="id" placeholder= "Enter Varsity ID" required>
+						<span class="focus-input"></span>
+                    </div>
+                    
+					<div class="wrap-input validate-input" data-validate = "Valid email is required: ex@diu.edu.bd">
+						<input class="input" type="text" name="email" placeholder= "Enter Varsity Email" required>
+						<span class="focus-input"></span>
+						
+					</div>
+
+					<div class="wrap-input validate-input" data-validate = "Password is required">
+						<input class="input" type="password" name="pass" placeholder="Set Password" required>
+						<span class="focus-input"></span>
+                    </div>
+
+                    <div class="wrap-input validate-input" >
+						<input class="input" type="text" name="experties" placeholder= "Experties" >
+						<span class="focus-input"></span>
+                    </div>
+
+                    <div class="wrap-input validate-input" >
+                        <input class="input" type="text" name="interest" placeholder= "Interest-area" >
+						<span class="focus-input"></span>
+					</div>
+
+					<div class="container-reg-form-btn">
+						
+                        <a class="reg-form-btn" href="../log/log.html" target="_blank">
+                            Submit
+                        </a>
+                       
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	
+</body>
+</html>
