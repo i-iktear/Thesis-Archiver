@@ -1,30 +1,25 @@
 {
-  "name": "server",
+  "name": "thesis_archiver_forum",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "engines": {
-    "node": "12.16.3",
-    "npm": "6.14.4"
-  },
+  "description": "It is thesis archiver forum.",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
-    "dev" : "nodemon index.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/i-iktear/Server.git"
-  },
-  "author": "Iktear Uddin",
+  "author": "Iktear",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/i-iktear/Server/issues"
-  },
-  "homepage": "https://github.com/i-iktear/Server#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.1",
-    "nodemon": "^2.0.4",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.25",
     "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
