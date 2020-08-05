@@ -1,0 +1,20 @@
+<div class="form-group">
+    <label for="title">
+       <b>Title</b> 
+    </label>
+    <input required value="<%= paper.title %>" type="text" name="title" id="title" class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="description"><b>Abstract</b></label>
+    <textarea required name="description" id="description" class="form-control"><%= paper.description %></textarea>
+</div>
+
+<div class="form-group">
+    <label for="markdown"><b>Publication Link (please upload the file to Google drive & give link here)</b> </label>
+    <textarea required name="markdown" id="markdown" class="form-control"><%= paper.markdown %></textarea>
+</div>
+<center>
+    <a href="/dashboard" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="btn btn-primary">Save</button>
+</center>

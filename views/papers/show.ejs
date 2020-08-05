@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thesis archiver Forum</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="card mt-4">
+            <div class="card-body">
+                <br>
+                <div class="card-text mb-2"><b>Tittle : </b><%= paper.title%></div>
+                <div class="text-muted mb-2">
+                    <b>Upload Time :</b> <%= paper.createdAt%>
+                </div>
+                <br>
+                <div class="card-text mb-2"><b>Abstract: </b><%= paper.description %></div>
+                <br>
+                <center>
+                    <a href="/dashboard" class="btn btn-secondary">All papers</a>
+                    <a href="/papers/edit/<%= paper.id %>" class="btn btn-info">Edit</a>
+                </center>
+                <br>
+                <div>
+                    <center>
+                        <form action="<%= paper.markdown %>">
+                            <button type="submit" class="btn btn-outline-success">Download & View the Publication</button>
+                        </form>
+                    </center>
+
+                    <!-- <a href="<%= paper.markdown %>">Download PDF</a>  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
