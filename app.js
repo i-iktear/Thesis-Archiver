@@ -12,7 +12,7 @@ const db = require('./config/keys').mongoURI;
 mongoose
   .connect(
     db,
-    { useNewUrlParser: true ,useUnifiedTopology: true}
+    { useNewUrlParser: true ,useUnifiedTopology: true, useCreateIndex: true}
   )
   .then(() => console.log('MongoDB Database Connected'))
   .catch(err => console.log(err));
@@ -42,6 +42,8 @@ app.use(function(req, res, next) {
 
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
+app.use('/papers', require('./routes/papers.js'));
+
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, console.log(`Server just started on port ${PORT}`));
