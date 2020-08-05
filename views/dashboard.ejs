@@ -1,3 +1,54 @@
-<h1 class="mt-4">Homepage</h1>
-<p class="lead mb-3">Welcome to Thesis Archiver Forum "<%= user.name %>"</p>
-<a href="/users/logout" class="btn btn-danger">Logout</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thesis archiver Forum</title>
+</head>
+
+<body>
+    <center>
+        <div>
+            <h1 class="mt-4">Thesis Archiver Forum</h1>
+        </div>
+        <div>
+            <h6>Welcome to Thesis Archiver Forum "<%= user.name %>" </h6>
+        </div>
+    </center>
+    <div class="container">
+        <center>
+            <a href="/papers/new" class="btn btn-success">Add New paper</a>
+        </center>
+        <% papers.forEach(paper => { %>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h4 class="card-title"><%= paper.title %></h4>
+                <br>
+                <div class="card-subtitle text-muted mb-2">
+                    <b>Upload : </b> <%= paper.createdAt %>
+                </div>
+                <br>
+                <!-- <div class="card-text mb-2"><%= paper.description %></div> -->
+                <a href="papers/<%= paper.slug %>" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    <br>
+    <br>
+    <center>
+        <div>
+            <a href="/users/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </center>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
