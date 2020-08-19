@@ -1,16 +1,36 @@
 const mongoose = require("mongoose");
 const marked = require("marked");
 const slugify = require("slugify");
+const createDomPurify = require("dompurify");
+const { JSDOM } = require("jsdom");
+const dompurify = createDomPurify(new JSDOM().window);
 
 const paperSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
   },
-  description: {
+  author: {
     type: String,
   },
-  markdown: {
+  session: {
+    type: String,
+    required: true
+  },
+  categories: {
+    type: String,
+  },
+  status: {
+    type: String,
+    required: true
+  },
+  userID: {
+    type: String,
+  },
+  abstract: {
+    type: String,
+  },
+  linkpdf: {
     type: String,
     required: true,
   },
@@ -23,6 +43,10 @@ const paperSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  sanitizedHtml: {
+    type: String,
+    required: true,
+  },
 });
 
 paperSchema.pre("validate", function (next) {
@@ -31,6 +55,9 @@ paperSchema.pre("validate", function (next) {
       strict: true,
       lower: true,
     });
+  }
+  if (this.abstract) {
+    this.sanitizedHtml = dompurify.sanitize(marked(this.abstract));
   }
   next();
 });
